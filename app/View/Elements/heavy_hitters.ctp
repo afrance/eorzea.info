@@ -6,6 +6,6 @@
 ?>
 <ol>
 	<?php foreach ($swings as $swing): ?>
-		printf("<li>%s - %s - %s</li>",  $swing['Swing']['damage'], $swing['Attacker']['name'], $swing['Victim']['name']);
+		<?php printf("<li>%s - %s - %s</li>",  $swing['Swing']['damage'], $swing['Attacker']['name'], $swing['Victim']['name']); ?>
 	<?php endforeach; ?>
 </ol>
