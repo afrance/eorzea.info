@@ -28,7 +28,9 @@
 		<td><?php echo h($encounter['Encounter']['duration']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['damage']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['encdps']); ?>&nbsp;</td>
-		<td><?php echo h($encounter['Encounter']['zone_id']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($encounter['Zone']['name'], array('controller' => 'zones', 'action' => 'view', $encounter['Zone']['id'])); ?>
+		</td>
 		<td><?php echo h($encounter['Encounter']['kills']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['deaths']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['original_db']); ?>&nbsp;</td>
@@ -60,6 +62,8 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Encounter'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Zones'), array('controller' => 'zones', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Zone'), array('controller' => 'zones', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Attack Types'), array('controller' => 'attack_types', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Attack Type'), array('controller' => 'attack_types', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Damage Types'), array('controller' => 'damage_types', 'action' => 'index')); ?> </li>

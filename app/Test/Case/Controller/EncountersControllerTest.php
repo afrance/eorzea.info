@@ -14,6 +14,7 @@ class EncountersControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.encounter',
+		'app.zone',
 		'app.attack_type',
 		'app.combatant',
 		'app.combatants_encounter',
