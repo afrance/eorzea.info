@@ -85,9 +85,10 @@
 	<?php if (!empty($encounter['AttackType'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
+		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Encounter Id'); ?></th>
-		<th><?php echo __('Attacker'); ?></th>
-		<th><?php echo __('Victim'); ?></th>
+		<th><?php echo __('Attacker Id'); ?></th>
+		<th><?php echo __('Victim Id'); ?></th>
 		<th><?php echo __('Swingtype'); ?></th>
 		<th><?php echo __('Type'); ?></th>
 		<th><?php echo __('Starttime'); ?></th>
@@ -120,9 +121,10 @@
 	</tr>
 	<?php foreach ($encounter['AttackType'] as $attackType): ?>
 		<tr>
+			<td><?php echo $attackType['id']; ?></td>
 			<td><?php echo $attackType['encounter_id']; ?></td>
-			<td><?php echo $attackType['attacker']; ?></td>
-			<td><?php echo $attackType['victim']; ?></td>
+			<td><?php echo $attackType['attacker_id']; ?></td>
+			<td><?php echo $attackType['victim_id']; ?></td>
 			<td><?php echo $attackType['swingtype']; ?></td>
 			<td><?php echo $attackType['type']; ?></td>
 			<td><?php echo $attackType['starttime']; ?></td>
