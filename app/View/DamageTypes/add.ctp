@@ -4,7 +4,7 @@
 		<legend><?php echo __('Add Damage Type'); ?></legend>
 	<?php
 		echo $this->Form->input('encounter_id');
-		echo $this->Form->input('combatant');
+		echo $this->Form->input('combatant_id');
 		echo $this->Form->input('grouping');
 		echo $this->Form->input('type');
 		echo $this->Form->input('starttime');

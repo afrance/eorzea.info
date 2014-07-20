@@ -3,8 +3,9 @@
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('encounter_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('combatant'); ?></th>
+			<th><?php echo $this->Paginator->sort('combatant_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('grouping'); ?></th>
 			<th><?php echo $this->Paginator->sort('type'); ?></th>
 			<th><?php echo $this->Paginator->sort('starttime'); ?></th>
@@ -35,10 +36,11 @@
 	<tbody>
 	<?php foreach ($damageTypes as $damageType): ?>
 	<tr>
+		<td><?php echo h($damageType['DamageType']['id']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($damageType['Encounter']['title'], array('controller' => 'encounters', 'action' => 'view', $damageType['Encounter']['id'])); ?>
 		</td>
-		<td><?php echo h($damageType['DamageType']['combatant']); ?>&nbsp;</td>
+		<td><?php echo h($damageType['DamageType']['combatant_id']); ?>&nbsp;</td>
 		<td><?php echo h($damageType['DamageType']['grouping']); ?>&nbsp;</td>
 		<td><?php echo h($damageType['DamageType']['type']); ?>&nbsp;</td>
 		<td><?php echo h($damageType['DamageType']['starttime']); ?>&nbsp;</td>

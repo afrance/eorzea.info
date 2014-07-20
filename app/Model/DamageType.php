@@ -4,6 +4,7 @@ App::uses('AppModel', 'Model');
  * DamageType Model
  *
  * @property Encounter $Encounter
+ * @property Combatant $Combatant
  */
 class DamageType extends AppModel {
 
@@ -19,6 +20,13 @@ class DamageType extends AppModel {
 		'Encounter' => array(
 			'className' => 'Encounter',
 			'foreignKey' => 'encounter_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Combatant' => array(
+			'className' => 'Combatant',
+			'foreignKey' => 'combatant_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

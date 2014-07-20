@@ -1,14 +1,19 @@
 <div class="damageTypes view">
 <h2><?php echo __('Damage Type'); ?></h2>
 	<dl>
+		<dt><?php echo __('Id'); ?></dt>
+		<dd>
+			<?php echo h($damageType['DamageType']['id']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Encounter'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($damageType['Encounter']['title'], array('controller' => 'encounters', 'action' => 'view', $damageType['Encounter']['id'])); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Combatant'); ?></dt>
+		<dt><?php echo __('Combatant Id'); ?></dt>
 		<dd>
-			<?php echo h($damageType['DamageType']['combatant']); ?>
+			<?php echo h($damageType['DamageType']['combatant_id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Grouping'); ?></dt>
