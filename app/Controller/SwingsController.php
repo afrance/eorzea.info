@@ -5,6 +5,7 @@ App::uses('AppController', 'Controller');
  *
  * @property Swing $Swing
  * @property PaginatorComponent $Paginator
+ * @property SessionComponent $Session
  */
 class SwingsController extends AppController {
 
@@ -13,7 +14,7 @@ class SwingsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Session');
 
 /**
  * index method

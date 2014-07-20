@@ -26,14 +26,14 @@ class Swing extends AppModel {
 			'order' => ''
 		),
 		'Attacker' => array(
-			'className' => 'Attacker',
+			'className' => 'Combatant',
 			'foreignKey' => 'attacker_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Victim' => array(
-			'className' => 'Victim',
+			'className' => 'Combatant',
 			'foreignKey' => 'victim_id',
 			'conditions' => '',
 			'fields' => '',
