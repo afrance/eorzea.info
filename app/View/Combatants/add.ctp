@@ -40,7 +40,8 @@
 		echo $this->Form->input('inctohit');
 		echo $this->Form->input('overhealpct');
 		echo $this->Form->input('original_db');
-		echo $this->Form->input('original_id');
+		echo $this->Form->input('original_encid');
+		echo $this->Form->input('Encounter');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

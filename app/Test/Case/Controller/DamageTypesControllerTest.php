@@ -16,10 +16,9 @@ class DamageTypesControllerTest extends ControllerTestCase {
 		'app.damage_type',
 		'app.encounter',
 		'app.attack_type',
+		'app.swing',
 		'app.combatant',
-		'app.original',
-		'app.combatants_encounter',
-		'app.swing'
+		'app.combatants_encounter'
 	);
 
 /**

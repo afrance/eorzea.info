@@ -55,6 +55,8 @@ class EncountersController extends AppController {
 				$this->Session->setFlash(__('The encounter could not be saved. Please, try again.'));
 			}
 		}
+		$combatants = $this->Encounter->Combatant->find('list');
+		$this->set(compact('combatants'));
 	}
 
 /**
@@ -79,6 +81,8 @@ class EncountersController extends AppController {
 			$options = array('conditions' => array('Encounter.' . $this->Encounter->primaryKey => $id));
 			$this->request->data = $this->Encounter->find('first', $options);
 		}
+		$combatants = $this->Encounter->Combatant->find('list');
+		$this->set(compact('combatants'));
 	}
 
 /**

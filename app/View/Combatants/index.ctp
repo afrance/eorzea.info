@@ -41,7 +41,7 @@
 			<th><?php echo $this->Paginator->sort('inctohit'); ?></th>
 			<th><?php echo $this->Paginator->sort('overhealpct'); ?></th>
 			<th><?php echo $this->Paginator->sort('original_db'); ?></th>
-			<th><?php echo $this->Paginator->sort('original_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('original_encid'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -86,7 +86,7 @@
 		<td><?php echo h($combatant['Combatant']['inctohit']); ?>&nbsp;</td>
 		<td><?php echo h($combatant['Combatant']['overhealpct']); ?>&nbsp;</td>
 		<td><?php echo h($combatant['Combatant']['original_db']); ?>&nbsp;</td>
-		<td><?php echo h($combatant['Combatant']['original_id']); ?>&nbsp;</td>
+		<td><?php echo h($combatant['Combatant']['original_encid']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $combatant['Combatant']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $combatant['Combatant']['id'])); ?>

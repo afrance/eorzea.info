@@ -15,7 +15,6 @@ class SwingsControllerTest extends ControllerTestCase {
 	public $fixtures = array(
 		'app.swing',
 		'app.encounter',
-		'app.original',
 		'app.attack_type',
 		'app.damage_type',
 		'app.combatant',

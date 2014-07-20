@@ -3,28 +3,12 @@ App::uses('AppModel', 'Model');
 /**
  * Combatant Model
  *
- * @property Original $Original
  * @property Encounter $Encounter
  */
 class Combatant extends AppModel {
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * belongsTo associations
- *
- * @var array
- */
-	public $belongsTo = array(
-		'Original' => array(
-			'className' => 'Original',
-			'foreignKey' => 'original_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
 
 /**
  * hasAndBelongsToMany associations

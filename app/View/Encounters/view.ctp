@@ -56,9 +56,9 @@
 			<?php echo h($encounter['Encounter']['original_db']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Original Id'); ?></dt>
+		<dt><?php echo __('Original Encid'); ?></dt>
 		<dd>
-			<?php echo h($encounter['Encounter']['original_id']); ?>
+			<?php echo h($encounter['Encounter']['original_encid']); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -72,12 +72,12 @@
 		<li><?php echo $this->Html->link(__('New Encounter'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Attack Types'), array('controller' => 'attack_types', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Attack Type'), array('controller' => 'attack_types', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Combatant'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Damage Types'), array('controller' => 'damage_types', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Damage Type'), array('controller' => 'damage_types', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Swings'), array('controller' => 'swings', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Swing'), array('controller' => 'swings', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Combatant'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 <div class="related">
@@ -164,109 +164,6 @@
 	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Attack Type'), array('controller' => 'attack_types', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Combatants'); ?></h3>
-	<?php if (!empty($encounter['Combatant'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Ally'); ?></th>
-		<th><?php echo __('Name'); ?></th>
-		<th><?php echo __('Starttime'); ?></th>
-		<th><?php echo __('Endtime'); ?></th>
-		<th><?php echo __('Duration'); ?></th>
-		<th><?php echo __('Damage'); ?></th>
-		<th><?php echo __('Damageperc'); ?></th>
-		<th><?php echo __('Kills'); ?></th>
-		<th><?php echo __('Healed'); ?></th>
-		<th><?php echo __('Healedperc'); ?></th>
-		<th><?php echo __('Critheals'); ?></th>
-		<th><?php echo __('Heals'); ?></th>
-		<th><?php echo __('Curedispels'); ?></th>
-		<th><?php echo __('Powerdrain'); ?></th>
-		<th><?php echo __('Powerreplenish'); ?></th>
-		<th><?php echo __('Dps'); ?></th>
-		<th><?php echo __('Encdps'); ?></th>
-		<th><?php echo __('Enchps'); ?></th>
-		<th><?php echo __('Hits'); ?></th>
-		<th><?php echo __('Crithits'); ?></th>
-		<th><?php echo __('Blocked'); ?></th>
-		<th><?php echo __('Misses'); ?></th>
-		<th><?php echo __('Swings'); ?></th>
-		<th><?php echo __('Healstaken'); ?></th>
-		<th><?php echo __('Damagetaken'); ?></th>
-		<th><?php echo __('Deaths'); ?></th>
-		<th><?php echo __('Tohit'); ?></th>
-		<th><?php echo __('Critdamperc'); ?></th>
-		<th><?php echo __('Crithealperc'); ?></th>
-		<th><?php echo __('Threatstr'); ?></th>
-		<th><?php echo __('Threatdelta'); ?></th>
-		<th><?php echo __('Job'); ?></th>
-		<th><?php echo __('Parrypct'); ?></th>
-		<th><?php echo __('Blockpct'); ?></th>
-		<th><?php echo __('Inctohit'); ?></th>
-		<th><?php echo __('Overhealpct'); ?></th>
-		<th><?php echo __('Original Db'); ?></th>
-		<th><?php echo __('Original Id'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php foreach ($encounter['Combatant'] as $combatant): ?>
-		<tr>
-			<td><?php echo $combatant['id']; ?></td>
-			<td><?php echo $combatant['ally']; ?></td>
-			<td><?php echo $combatant['name']; ?></td>
-			<td><?php echo $combatant['starttime']; ?></td>
-			<td><?php echo $combatant['endtime']; ?></td>
-			<td><?php echo $combatant['duration']; ?></td>
-			<td><?php echo $combatant['damage']; ?></td>
-			<td><?php echo $combatant['damageperc']; ?></td>
-			<td><?php echo $combatant['kills']; ?></td>
-			<td><?php echo $combatant['healed']; ?></td>
-			<td><?php echo $combatant['healedperc']; ?></td>
-			<td><?php echo $combatant['critheals']; ?></td>
-			<td><?php echo $combatant['heals']; ?></td>
-			<td><?php echo $combatant['curedispels']; ?></td>
-			<td><?php echo $combatant['powerdrain']; ?></td>
-			<td><?php echo $combatant['powerreplenish']; ?></td>
-			<td><?php echo $combatant['dps']; ?></td>
-			<td><?php echo $combatant['encdps']; ?></td>
-			<td><?php echo $combatant['enchps']; ?></td>
-			<td><?php echo $combatant['hits']; ?></td>
-			<td><?php echo $combatant['crithits']; ?></td>
-			<td><?php echo $combatant['blocked']; ?></td>
-			<td><?php echo $combatant['misses']; ?></td>
-			<td><?php echo $combatant['swings']; ?></td>
-			<td><?php echo $combatant['healstaken']; ?></td>
-			<td><?php echo $combatant['damagetaken']; ?></td>
-			<td><?php echo $combatant['deaths']; ?></td>
-			<td><?php echo $combatant['tohit']; ?></td>
-			<td><?php echo $combatant['critdamperc']; ?></td>
-			<td><?php echo $combatant['crithealperc']; ?></td>
-			<td><?php echo $combatant['threatstr']; ?></td>
-			<td><?php echo $combatant['threatdelta']; ?></td>
-			<td><?php echo $combatant['job']; ?></td>
-			<td><?php echo $combatant['parrypct']; ?></td>
-			<td><?php echo $combatant['blockpct']; ?></td>
-			<td><?php echo $combatant['inctohit']; ?></td>
-			<td><?php echo $combatant['overhealpct']; ?></td>
-			<td><?php echo $combatant['original_db']; ?></td>
-			<td><?php echo $combatant['original_id']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'combatants', 'action' => 'view', $combatant['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'combatants', 'action' => 'edit', $combatant['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'combatants', 'action' => 'delete', $combatant['id']), array(), __('Are you sure you want to delete # %s?', $combatant['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Combatant'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 </div>
@@ -397,6 +294,109 @@
 	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Swing'), array('controller' => 'swings', 'action' => 'add')); ?> </li>
+		</ul>
+	</div>
+</div>
+<div class="related">
+	<h3><?php echo __('Related Combatants'); ?></h3>
+	<?php if (!empty($encounter['Combatant'])): ?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?php echo __('Id'); ?></th>
+		<th><?php echo __('Ally'); ?></th>
+		<th><?php echo __('Name'); ?></th>
+		<th><?php echo __('Starttime'); ?></th>
+		<th><?php echo __('Endtime'); ?></th>
+		<th><?php echo __('Duration'); ?></th>
+		<th><?php echo __('Damage'); ?></th>
+		<th><?php echo __('Damageperc'); ?></th>
+		<th><?php echo __('Kills'); ?></th>
+		<th><?php echo __('Healed'); ?></th>
+		<th><?php echo __('Healedperc'); ?></th>
+		<th><?php echo __('Critheals'); ?></th>
+		<th><?php echo __('Heals'); ?></th>
+		<th><?php echo __('Curedispels'); ?></th>
+		<th><?php echo __('Powerdrain'); ?></th>
+		<th><?php echo __('Powerreplenish'); ?></th>
+		<th><?php echo __('Dps'); ?></th>
+		<th><?php echo __('Encdps'); ?></th>
+		<th><?php echo __('Enchps'); ?></th>
+		<th><?php echo __('Hits'); ?></th>
+		<th><?php echo __('Crithits'); ?></th>
+		<th><?php echo __('Blocked'); ?></th>
+		<th><?php echo __('Misses'); ?></th>
+		<th><?php echo __('Swings'); ?></th>
+		<th><?php echo __('Healstaken'); ?></th>
+		<th><?php echo __('Damagetaken'); ?></th>
+		<th><?php echo __('Deaths'); ?></th>
+		<th><?php echo __('Tohit'); ?></th>
+		<th><?php echo __('Critdamperc'); ?></th>
+		<th><?php echo __('Crithealperc'); ?></th>
+		<th><?php echo __('Threatstr'); ?></th>
+		<th><?php echo __('Threatdelta'); ?></th>
+		<th><?php echo __('Job'); ?></th>
+		<th><?php echo __('Parrypct'); ?></th>
+		<th><?php echo __('Blockpct'); ?></th>
+		<th><?php echo __('Inctohit'); ?></th>
+		<th><?php echo __('Overhealpct'); ?></th>
+		<th><?php echo __('Original Db'); ?></th>
+		<th><?php echo __('Original Encid'); ?></th>
+		<th class="actions"><?php echo __('Actions'); ?></th>
+	</tr>
+	<?php foreach ($encounter['Combatant'] as $combatant): ?>
+		<tr>
+			<td><?php echo $combatant['id']; ?></td>
+			<td><?php echo $combatant['ally']; ?></td>
+			<td><?php echo $combatant['name']; ?></td>
+			<td><?php echo $combatant['starttime']; ?></td>
+			<td><?php echo $combatant['endtime']; ?></td>
+			<td><?php echo $combatant['duration']; ?></td>
+			<td><?php echo $combatant['damage']; ?></td>
+			<td><?php echo $combatant['damageperc']; ?></td>
+			<td><?php echo $combatant['kills']; ?></td>
+			<td><?php echo $combatant['healed']; ?></td>
+			<td><?php echo $combatant['healedperc']; ?></td>
+			<td><?php echo $combatant['critheals']; ?></td>
+			<td><?php echo $combatant['heals']; ?></td>
+			<td><?php echo $combatant['curedispels']; ?></td>
+			<td><?php echo $combatant['powerdrain']; ?></td>
+			<td><?php echo $combatant['powerreplenish']; ?></td>
+			<td><?php echo $combatant['dps']; ?></td>
+			<td><?php echo $combatant['encdps']; ?></td>
+			<td><?php echo $combatant['enchps']; ?></td>
+			<td><?php echo $combatant['hits']; ?></td>
+			<td><?php echo $combatant['crithits']; ?></td>
+			<td><?php echo $combatant['blocked']; ?></td>
+			<td><?php echo $combatant['misses']; ?></td>
+			<td><?php echo $combatant['swings']; ?></td>
+			<td><?php echo $combatant['healstaken']; ?></td>
+			<td><?php echo $combatant['damagetaken']; ?></td>
+			<td><?php echo $combatant['deaths']; ?></td>
+			<td><?php echo $combatant['tohit']; ?></td>
+			<td><?php echo $combatant['critdamperc']; ?></td>
+			<td><?php echo $combatant['crithealperc']; ?></td>
+			<td><?php echo $combatant['threatstr']; ?></td>
+			<td><?php echo $combatant['threatdelta']; ?></td>
+			<td><?php echo $combatant['job']; ?></td>
+			<td><?php echo $combatant['parrypct']; ?></td>
+			<td><?php echo $combatant['blockpct']; ?></td>
+			<td><?php echo $combatant['inctohit']; ?></td>
+			<td><?php echo $combatant['overhealpct']; ?></td>
+			<td><?php echo $combatant['original_db']; ?></td>
+			<td><?php echo $combatant['original_encid']; ?></td>
+			<td class="actions">
+				<?php echo $this->Html->link(__('View'), array('controller' => 'combatants', 'action' => 'view', $combatant['id'])); ?>
+				<?php echo $this->Html->link(__('Edit'), array('controller' => 'combatants', 'action' => 'edit', $combatant['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'combatants', 'action' => 'delete', $combatant['id']), array(), __('Are you sure you want to delete # %s?', $combatant['id'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+
+	<div class="actions">
+		<ul>
+			<li><?php echo $this->Html->link(__('New Combatant'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 </div>

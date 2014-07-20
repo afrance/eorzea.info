@@ -15,9 +15,10 @@ class AttackTypesControllerTest extends ControllerTestCase {
 	public $fixtures = array(
 		'app.attack_type',
 		'app.encounter',
-		'app.combatant',
 		'app.damage_type',
-		'app.swing'
+		'app.swing',
+		'app.combatant',
+		'app.combatants_encounter'
 	);
 
 /**

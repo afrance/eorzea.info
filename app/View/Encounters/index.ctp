@@ -14,7 +14,7 @@
 			<th><?php echo $this->Paginator->sort('kills'); ?></th>
 			<th><?php echo $this->Paginator->sort('deaths'); ?></th>
 			<th><?php echo $this->Paginator->sort('original_db'); ?></th>
-			<th><?php echo $this->Paginator->sort('original_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('original_encid'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -32,7 +32,7 @@
 		<td><?php echo h($encounter['Encounter']['kills']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['deaths']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['original_db']); ?>&nbsp;</td>
-		<td><?php echo h($encounter['Encounter']['original_id']); ?>&nbsp;</td>
+		<td><?php echo h($encounter['Encounter']['original_encid']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $encounter['Encounter']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $encounter['Encounter']['id'])); ?>
@@ -62,11 +62,11 @@
 		<li><?php echo $this->Html->link(__('New Encounter'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Attack Types'), array('controller' => 'attack_types', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Attack Type'), array('controller' => 'attack_types', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Combatant'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Damage Types'), array('controller' => 'damage_types', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Damage Type'), array('controller' => 'damage_types', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Swings'), array('controller' => 'swings', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Swing'), array('controller' => 'swings', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Combatant'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
