@@ -24,7 +24,6 @@ class EncountersController extends AppController {
 		$this->Encounter->recursive = 0;
 		$this->set('encounters', $this->Paginator->paginate());
 	}
-	
 
 /**
  * view method
@@ -34,7 +33,6 @@ class EncountersController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-		$this->Encounter->recursive = 0;
 		if (!$this->Encounter->exists($id)) {
 			throw new NotFoundException(__('Invalid encounter'));
 		}

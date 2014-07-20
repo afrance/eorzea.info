@@ -10,7 +10,7 @@
 			<th><?php echo $this->Paginator->sort('duration'); ?></th>
 			<th><?php echo $this->Paginator->sort('damage'); ?></th>
 			<th><?php echo $this->Paginator->sort('encdps'); ?></th>
-			<th><?php echo $this->Paginator->sort('zone'); ?></th>
+			<th><?php echo $this->Paginator->sort('zone_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('kills'); ?></th>
 			<th><?php echo $this->Paginator->sort('deaths'); ?></th>
 			<th><?php echo $this->Paginator->sort('original_db'); ?></th>
@@ -28,7 +28,7 @@
 		<td><?php echo h($encounter['Encounter']['duration']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['damage']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['encdps']); ?>&nbsp;</td>
-		<td><?php echo h($encounter['Encounter']['zone']); ?>&nbsp;</td>
+		<td><?php echo h($encounter['Encounter']['zone_id']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['kills']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['deaths']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['original_db']); ?>&nbsp;</td>

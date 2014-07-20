@@ -3,6 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * Encounter Model
  *
+ * @property Zone $Zone
  * @property AttackType $AttackType
  * @property DamageType $DamageType
  * @property Swing $Swing
@@ -12,6 +13,21 @@ class Encounter extends AppModel {
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'Zone' => array(
+			'className' => 'Zone',
+			'foreignKey' => 'zone_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
 
 /**
  * hasMany associations

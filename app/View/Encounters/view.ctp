@@ -36,9 +36,9 @@
 			<?php echo h($encounter['Encounter']['encdps']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Zone'); ?></dt>
+		<dt><?php echo __('Zone Id'); ?></dt>
 		<dd>
-			<?php echo h($encounter['Encounter']['zone']); ?>
+			<?php echo h($encounter['Encounter']['zone_id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Kills'); ?></dt>
@@ -174,8 +174,9 @@
 	<?php if (!empty($encounter['DamageType'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
+		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Encounter Id'); ?></th>
-		<th><?php echo __('Combatant'); ?></th>
+		<th><?php echo __('Combatant Id'); ?></th>
 		<th><?php echo __('Grouping'); ?></th>
 		<th><?php echo __('Type'); ?></th>
 		<th><?php echo __('Starttime'); ?></th>
@@ -204,8 +205,9 @@
 	</tr>
 	<?php foreach ($encounter['DamageType'] as $damageType): ?>
 		<tr>
+			<td><?php echo $damageType['id']; ?></td>
 			<td><?php echo $damageType['encounter_id']; ?></td>
-			<td><?php echo $damageType['combatant']; ?></td>
+			<td><?php echo $damageType['combatant_id']; ?></td>
 			<td><?php echo $damageType['grouping']; ?></td>
 			<td><?php echo $damageType['type']; ?></td>
 			<td><?php echo $damageType['starttime']; ?></td>

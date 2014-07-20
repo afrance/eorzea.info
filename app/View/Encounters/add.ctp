@@ -9,7 +9,7 @@
 		echo $this->Form->input('duration');
 		echo $this->Form->input('damage');
 		echo $this->Form->input('encdps');
-		echo $this->Form->input('zone');
+		echo $this->Form->input('zone_id');
 		echo $this->Form->input('kills');
 		echo $this->Form->input('deaths');
 		echo $this->Form->input('original_db');
