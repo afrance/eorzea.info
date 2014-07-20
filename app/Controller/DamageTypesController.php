@@ -56,7 +56,8 @@ class DamageTypesController extends AppController {
 			}
 		}
 		$encounters = $this->DamageType->Encounter->find('list');
-		$this->set(compact('encounters'));
+		$combatants = $this->DamageType->Combatant->find('list');
+		$this->set(compact('encounters', 'combatants'));
 	}
 
 /**
@@ -82,7 +83,8 @@ class DamageTypesController extends AppController {
 			$this->request->data = $this->DamageType->find('first', $options);
 		}
 		$encounters = $this->DamageType->Encounter->find('list');
-		$this->set(compact('encounters'));
+		$combatants = $this->DamageType->Combatant->find('list');
+		$this->set(compact('encounters', 'combatants'));
 	}
 
 /**

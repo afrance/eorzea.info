@@ -11,9 +11,9 @@
 			<?php echo $this->Html->link($damageType['Encounter']['title'], array('controller' => 'encounters', 'action' => 'view', $damageType['Encounter']['id'])); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Combatant Id'); ?></dt>
+		<dt><?php echo __('Combatant'); ?></dt>
 		<dd>
-			<?php echo h($damageType['DamageType']['combatant_id']); ?>
+			<?php echo $this->Html->link($damageType['Combatant']['name'], array('controller' => 'combatants', 'action' => 'view', $damageType['Combatant']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Grouping'); ?></dt>
@@ -147,5 +147,7 @@
 		<li><?php echo $this->Html->link(__('New Damage Type'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Encounters'), array('controller' => 'encounters', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Combatant'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
