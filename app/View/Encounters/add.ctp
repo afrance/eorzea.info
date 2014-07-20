@@ -12,6 +12,8 @@
 		echo $this->Form->input('zone');
 		echo $this->Form->input('kills');
 		echo $this->Form->input('deaths');
+		echo $this->Form->input('original_db');
+		echo $this->Form->input('original_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

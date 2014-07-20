@@ -16,6 +16,8 @@ class EncountersControllerTest extends ControllerTestCase {
 		'app.encounter',
 		'app.attack_type',
 		'app.combatant',
+		'app.original',
+		'app.combatants_encounter',
 		'app.damage_type',
 		'app.swing'
 	);

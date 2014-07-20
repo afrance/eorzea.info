@@ -3,15 +3,31 @@ App::uses('AppModel', 'Model');
 /**
  * Encounter Model
  *
+ * @property Original $Original
  * @property AttackType $AttackType
- * @property Combatant $Combatant
  * @property DamageType $DamageType
  * @property Swing $Swing
+ * @property Combatant $Combatant
  */
 class Encounter extends AppModel {
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'Original' => array(
+			'className' => 'Original',
+			'foreignKey' => 'original_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
 
 /**
  * hasMany associations
@@ -21,19 +37,6 @@ class Encounter extends AppModel {
 	public $hasMany = array(
 		'AttackType' => array(
 			'className' => 'AttackType',
-			'foreignKey' => 'encounter_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Combatant' => array(
-			'className' => 'Combatant',
 			'foreignKey' => 'encounter_id',
 			'dependent' => false,
 			'conditions' => '',
@@ -70,6 +73,28 @@ class Encounter extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		)
+	);
+
+
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
+		'Combatant' => array(
+			'className' => 'Combatant',
+			'joinTable' => 'combatants_encounters',
+			'foreignKey' => 'encounter_id',
+			'associationForeignKey' => 'combatant_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
 		)
 	);
 

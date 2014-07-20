@@ -1,9 +1,9 @@
 <div class="combatants view">
 <h2><?php echo __('Combatant'); ?></h2>
 	<dl>
-		<dt><?php echo __('Encounter'); ?></dt>
+		<dt><?php echo __('Id'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($combatant['Encounter']['title'], array('controller' => 'encounters', 'action' => 'view', $combatant['Encounter']['id'])); ?>
+			<?php echo h($combatant['Combatant']['id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Ally'); ?></dt>
@@ -184,6 +184,16 @@
 		<dt><?php echo __('Overhealpct'); ?></dt>
 		<dd>
 			<?php echo h($combatant['Combatant']['overhealpct']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Original Db'); ?></dt>
+		<dd>
+			<?php echo h($combatant['Combatant']['original_db']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Original Id'); ?></dt>
+		<dd>
+			<?php echo h($combatant['Combatant']['original_id']); ?>
 			&nbsp;
 		</dd>
 	</dl>

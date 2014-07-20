@@ -3,6 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * Combatant Model
  *
+ * @property Original $Original
  * @property Encounter $Encounter
  */
 class Combatant extends AppModel {
@@ -16,12 +17,34 @@ class Combatant extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Encounter' => array(
-			'className' => 'Encounter',
-			'foreignKey' => 'encounter_id',
+		'Original' => array(
+			'className' => 'Original',
+			'foreignKey' => 'original_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		)
 	);
+
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
+		'Encounter' => array(
+			'className' => 'Encounter',
+			'joinTable' => 'combatants_encounters',
+			'foreignKey' => 'combatant_id',
+			'associationForeignKey' => 'encounter_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		)
+	);
+
 }

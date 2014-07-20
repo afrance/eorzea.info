@@ -3,7 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('encounter_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('ally'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('starttime'); ?></th>
@@ -40,15 +40,15 @@
 			<th><?php echo $this->Paginator->sort('blockpct'); ?></th>
 			<th><?php echo $this->Paginator->sort('inctohit'); ?></th>
 			<th><?php echo $this->Paginator->sort('overhealpct'); ?></th>
+			<th><?php echo $this->Paginator->sort('original_db'); ?></th>
+			<th><?php echo $this->Paginator->sort('original_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
 	<?php foreach ($combatants as $combatant): ?>
 	<tr>
-		<td>
-			<?php echo $this->Html->link($combatant['Encounter']['title'], array('controller' => 'encounters', 'action' => 'view', $combatant['Encounter']['id'])); ?>
-		</td>
+		<td><?php echo h($combatant['Combatant']['id']); ?>&nbsp;</td>
 		<td><?php echo h($combatant['Combatant']['ally']); ?>&nbsp;</td>
 		<td><?php echo h($combatant['Combatant']['name']); ?>&nbsp;</td>
 		<td><?php echo h($combatant['Combatant']['starttime']); ?>&nbsp;</td>
@@ -85,6 +85,8 @@
 		<td><?php echo h($combatant['Combatant']['blockpct']); ?>&nbsp;</td>
 		<td><?php echo h($combatant['Combatant']['inctohit']); ?>&nbsp;</td>
 		<td><?php echo h($combatant['Combatant']['overhealpct']); ?>&nbsp;</td>
+		<td><?php echo h($combatant['Combatant']['original_db']); ?>&nbsp;</td>
+		<td><?php echo h($combatant['Combatant']['original_id']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $combatant['Combatant']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $combatant['Combatant']['id'])); ?>

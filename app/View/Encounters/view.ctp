@@ -51,6 +51,16 @@
 			<?php echo h($encounter['Encounter']['deaths']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Original Db'); ?></dt>
+		<dd>
+			<?php echo h($encounter['Encounter']['original_db']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Original Id'); ?></dt>
+		<dd>
+			<?php echo h($encounter['Encounter']['original_id']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">
@@ -162,7 +172,7 @@
 	<?php if (!empty($encounter['Combatant'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
-		<th><?php echo __('Encounter Id'); ?></th>
+		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Ally'); ?></th>
 		<th><?php echo __('Name'); ?></th>
 		<th><?php echo __('Starttime'); ?></th>
@@ -199,11 +209,13 @@
 		<th><?php echo __('Blockpct'); ?></th>
 		<th><?php echo __('Inctohit'); ?></th>
 		<th><?php echo __('Overhealpct'); ?></th>
+		<th><?php echo __('Original Db'); ?></th>
+		<th><?php echo __('Original Id'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($encounter['Combatant'] as $combatant): ?>
 		<tr>
-			<td><?php echo $combatant['encounter_id']; ?></td>
+			<td><?php echo $combatant['id']; ?></td>
 			<td><?php echo $combatant['ally']; ?></td>
 			<td><?php echo $combatant['name']; ?></td>
 			<td><?php echo $combatant['starttime']; ?></td>
@@ -240,6 +252,8 @@
 			<td><?php echo $combatant['blockpct']; ?></td>
 			<td><?php echo $combatant['inctohit']; ?></td>
 			<td><?php echo $combatant['overhealpct']; ?></td>
+			<td><?php echo $combatant['original_db']; ?></td>
+			<td><?php echo $combatant['original_id']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'combatants', 'action' => 'view', $combatant['id'])); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'combatants', 'action' => 'edit', $combatant['id'])); ?>

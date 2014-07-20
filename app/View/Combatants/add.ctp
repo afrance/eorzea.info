@@ -3,7 +3,6 @@
 	<fieldset>
 		<legend><?php echo __('Add Combatant'); ?></legend>
 	<?php
-		echo $this->Form->input('encounter_id');
 		echo $this->Form->input('ally');
 		echo $this->Form->input('name');
 		echo $this->Form->input('starttime');
@@ -40,6 +39,8 @@
 		echo $this->Form->input('blockpct');
 		echo $this->Form->input('inctohit');
 		echo $this->Form->input('overhealpct');
+		echo $this->Form->input('original_db');
+		echo $this->Form->input('original_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

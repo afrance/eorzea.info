@@ -1,11 +1,11 @@
 <?php
-App::uses('DamageTypesController', 'Controller');
+App::uses('CombatantsEncountersController', 'Controller');
 
 /**
- * DamageTypesController Test Case
+ * CombatantsEncountersController Test Case
  *
  */
-class DamageTypesControllerTest extends ControllerTestCase {
+class CombatantsEncountersControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,12 +13,12 @@ class DamageTypesControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.damage_type',
-		'app.encounter',
-		'app.attack_type',
+		'app.combatants_encounter',
 		'app.combatant',
 		'app.original',
-		'app.combatants_encounter',
+		'app.encounter',
+		'app.attack_type',
+		'app.damage_type',
 		'app.swing'
 	);
 

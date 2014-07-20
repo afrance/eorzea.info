@@ -13,6 +13,8 @@
 			<th><?php echo $this->Paginator->sort('zone'); ?></th>
 			<th><?php echo $this->Paginator->sort('kills'); ?></th>
 			<th><?php echo $this->Paginator->sort('deaths'); ?></th>
+			<th><?php echo $this->Paginator->sort('original_db'); ?></th>
+			<th><?php echo $this->Paginator->sort('original_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -29,6 +31,8 @@
 		<td><?php echo h($encounter['Encounter']['zone']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['kills']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['deaths']); ?>&nbsp;</td>
+		<td><?php echo h($encounter['Encounter']['original_db']); ?>&nbsp;</td>
+		<td><?php echo h($encounter['Encounter']['original_id']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $encounter['Encounter']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $encounter['Encounter']['id'])); ?>
