@@ -23,7 +23,13 @@ class SwingsController extends AppController {
  */
 	public function index() {
 		$this->Swing->recursive = 0;
-		$this->set('swings', $this->Paginator->paginate());
+		
+		if ($this->request->is('requested')) {
+			return $this->Paginator->paginate();
+        } else {
+			$this->set('swings', $this->Paginator->paginate());
+        }
+		
 	}
 
 /**
