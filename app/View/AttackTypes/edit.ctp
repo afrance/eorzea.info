@@ -3,9 +3,10 @@
 	<fieldset>
 		<legend><?php echo __('Edit Attack Type'); ?></legend>
 	<?php
+		echo $this->Form->input('id');
 		echo $this->Form->input('encounter_id');
-		echo $this->Form->input('attacker');
-		echo $this->Form->input('victim');
+		echo $this->Form->input('attacker_id');
+		echo $this->Form->input('victim_id');
 		echo $this->Form->input('swingtype');
 		echo $this->Form->input('type');
 		echo $this->Form->input('starttime');
@@ -46,5 +47,7 @@
 		<li><?php echo $this->Html->link(__('List Attack Types'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Encounters'), array('controller' => 'encounters', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Attacker'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

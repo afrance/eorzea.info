@@ -1,6 +1,11 @@
 <div class="attackTypes view">
 <h2><?php echo __('Attack Type'); ?></h2>
 	<dl>
+		<dt><?php echo __('Id'); ?></dt>
+		<dd>
+			<?php echo h($attackType['AttackType']['id']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Encounter'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($attackType['Encounter']['title'], array('controller' => 'encounters', 'action' => 'view', $attackType['Encounter']['id'])); ?>
@@ -8,12 +13,12 @@
 		</dd>
 		<dt><?php echo __('Attacker'); ?></dt>
 		<dd>
-			<?php echo h($attackType['AttackType']['attacker']); ?>
+			<?php echo $this->Html->link($attackType['Attacker']['name'], array('controller' => 'combatants', 'action' => 'view', $attackType['Attacker']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Victim'); ?></dt>
 		<dd>
-			<?php echo h($attackType['AttackType']['victim']); ?>
+			<?php echo $this->Html->link($attackType['Victim']['name'], array('controller' => 'combatants', 'action' => 'view', $attackType['Victim']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Swingtype'); ?></dt>
@@ -167,5 +172,7 @@
 		<li><?php echo $this->Html->link(__('New Attack Type'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Encounters'), array('controller' => 'encounters', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Attacker'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
