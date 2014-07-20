@@ -6,8 +6,8 @@
 ?>
 <ol>
 	<?php foreach ($swings as $swing): ?>
-		<li><?php echo $swing['Swing']['damage']; ?></li>
-		<li><?php var_dump($swing['Attacker']['name']); ?></li>
-		<li><?php var_dump($swing['Victim']['name']); ?></li>
+		<li><?php echo $swing['Swing']['damage']; ?> - 
+		<?php var_dump($swing['Attacker']); ?> - 
+		<?php var_dump($swing['Victim']); ?></li>
 	<?php endforeach; ?>
 </ol>
