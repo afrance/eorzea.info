@@ -3,7 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('encounter_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('title'); ?></th>
 			<th><?php echo $this->Paginator->sort('starttime'); ?></th>
 			<th><?php echo $this->Paginator->sort('endtime'); ?></th>
@@ -19,9 +19,7 @@
 	<tbody>
 	<?php foreach ($encounters as $encounter): ?>
 	<tr>
-		<td>
-			<?php echo $this->Html->link($encounter['Encounter']['title'], array('controller' => 'encounters', 'action' => 'view', $encounter['Encounter']['id'])); ?>
-		</td>
+		<td><?php echo h($encounter['Encounter']['id']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['title']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['starttime']); ?>&nbsp;</td>
 		<td><?php echo h($encounter['Encounter']['endtime']); ?>&nbsp;</td>
@@ -58,8 +56,6 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Encounter'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Encounters'), array('controller' => 'encounters', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Attack Types'), array('controller' => 'attack_types', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Attack Type'), array('controller' => 'attack_types', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>

@@ -3,7 +3,7 @@
 	<fieldset>
 		<legend><?php echo __('Edit Encounter'); ?></legend>
 	<?php
-		echo $this->Form->input('encounter_id');
+		echo $this->Form->input('id');
 		echo $this->Form->input('title');
 		echo $this->Form->input('starttime');
 		echo $this->Form->input('endtime');
@@ -23,8 +23,6 @@
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Encounter.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Encounter.id'))); ?></li>
 		<li><?php echo $this->Html->link(__('List Encounters'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Encounters'), array('controller' => 'encounters', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Attack Types'), array('controller' => 'attack_types', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Attack Type'), array('controller' => 'attack_types', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>

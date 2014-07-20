@@ -1,9 +1,9 @@
 <div class="encounters view">
 <h2><?php echo __('Encounter'); ?></h2>
 	<dl>
-		<dt><?php echo __('Encounter'); ?></dt>
+		<dt><?php echo __('Id'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($encounter['Encounter']['title'], array('controller' => 'encounters', 'action' => 'view', $encounter['Encounter']['id'])); ?>
+			<?php echo h($encounter['Encounter']['id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Title'); ?></dt>
@@ -60,8 +60,6 @@
 		<li><?php echo $this->Form->postLink(__('Delete Encounter'), array('action' => 'delete', $encounter['Encounter']['id']), array(), __('Are you sure you want to delete # %s?', $encounter['Encounter']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Encounters'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Encounter'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Encounters'), array('controller' => 'encounters', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Attack Types'), array('controller' => 'attack_types', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Attack Type'), array('controller' => 'attack_types', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
@@ -332,51 +330,6 @@
 	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Damage Type'), array('controller' => 'damage_types', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Encounters'); ?></h3>
-	<?php if (!empty($encounter['Encounter'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Encounter Id'); ?></th>
-		<th><?php echo __('Title'); ?></th>
-		<th><?php echo __('Starttime'); ?></th>
-		<th><?php echo __('Endtime'); ?></th>
-		<th><?php echo __('Duration'); ?></th>
-		<th><?php echo __('Damage'); ?></th>
-		<th><?php echo __('Encdps'); ?></th>
-		<th><?php echo __('Zone'); ?></th>
-		<th><?php echo __('Kills'); ?></th>
-		<th><?php echo __('Deaths'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php foreach ($encounter['Encounter'] as $encounter): ?>
-		<tr>
-			<td><?php echo $encounter['encounter_id']; ?></td>
-			<td><?php echo $encounter['title']; ?></td>
-			<td><?php echo $encounter['starttime']; ?></td>
-			<td><?php echo $encounter['endtime']; ?></td>
-			<td><?php echo $encounter['duration']; ?></td>
-			<td><?php echo $encounter['damage']; ?></td>
-			<td><?php echo $encounter['encdps']; ?></td>
-			<td><?php echo $encounter['zone']; ?></td>
-			<td><?php echo $encounter['kills']; ?></td>
-			<td><?php echo $encounter['deaths']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'encounters', 'action' => 'view', $encounter['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'encounters', 'action' => 'edit', $encounter['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'encounters', 'action' => 'delete', $encounter['id']), array(), __('Are you sure you want to delete # %s?', $encounter['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 </div>

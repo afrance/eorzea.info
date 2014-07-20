@@ -3,7 +3,6 @@
 	<fieldset>
 		<legend><?php echo __('Add Encounter'); ?></legend>
 	<?php
-		echo $this->Form->input('encounter_id');
 		echo $this->Form->input('title');
 		echo $this->Form->input('starttime');
 		echo $this->Form->input('endtime');
@@ -22,8 +21,6 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List Encounters'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Encounters'), array('controller' => 'encounters', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Attack Types'), array('controller' => 'attack_types', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Attack Type'), array('controller' => 'attack_types', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
