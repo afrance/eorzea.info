@@ -3,13 +3,14 @@
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('encounter_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('stime'); ?></th>
-			<th><?php echo $this->Paginator->sort('attacker'); ?></th>
+			<th><?php echo $this->Paginator->sort('attacker_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('swingtype'); ?></th>
 			<th><?php echo $this->Paginator->sort('attacktype'); ?></th>
 			<th><?php echo $this->Paginator->sort('damagetype'); ?></th>
-			<th><?php echo $this->Paginator->sort('victim'); ?></th>
+			<th><?php echo $this->Paginator->sort('victim_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('damage'); ?></th>
 			<th><?php echo $this->Paginator->sort('damagestring'); ?></th>
 			<th><?php echo $this->Paginator->sort('critical'); ?></th>
@@ -23,15 +24,20 @@
 	<tbody>
 	<?php foreach ($swings as $swing): ?>
 	<tr>
+		<td><?php echo h($swing['Swing']['id']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($swing['Encounter']['title'], array('controller' => 'encounters', 'action' => 'view', $swing['Encounter']['id'])); ?>
 		</td>
 		<td><?php echo h($swing['Swing']['stime']); ?>&nbsp;</td>
-		<td><?php echo h($swing['Swing']['attacker']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($swing['Attacker']['name'], array('controller' => 'combatants', 'action' => 'view', $swing['Attacker']['id'])); ?>
+		</td>
 		<td><?php echo h($swing['Swing']['swingtype']); ?>&nbsp;</td>
 		<td><?php echo h($swing['Swing']['attacktype']); ?>&nbsp;</td>
 		<td><?php echo h($swing['Swing']['damagetype']); ?>&nbsp;</td>
-		<td><?php echo h($swing['Swing']['victim']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($swing['Victim']['name'], array('controller' => 'combatants', 'action' => 'view', $swing['Victim']['id'])); ?>
+		</td>
 		<td><?php echo h($swing['Swing']['damage']); ?>&nbsp;</td>
 		<td><?php echo h($swing['Swing']['damagestring']); ?>&nbsp;</td>
 		<td><?php echo h($swing['Swing']['critical']); ?>&nbsp;</td>
@@ -68,5 +74,7 @@
 		<li><?php echo $this->Html->link(__('New Swing'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Encounters'), array('controller' => 'encounters', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Attacker'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

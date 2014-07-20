@@ -249,13 +249,14 @@
 	<?php if (!empty($encounter['Swing'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
+		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Encounter Id'); ?></th>
 		<th><?php echo __('Stime'); ?></th>
-		<th><?php echo __('Attacker'); ?></th>
+		<th><?php echo __('Attacker Id'); ?></th>
 		<th><?php echo __('Swingtype'); ?></th>
 		<th><?php echo __('Attacktype'); ?></th>
 		<th><?php echo __('Damagetype'); ?></th>
-		<th><?php echo __('Victim'); ?></th>
+		<th><?php echo __('Victim Id'); ?></th>
 		<th><?php echo __('Damage'); ?></th>
 		<th><?php echo __('Damagestring'); ?></th>
 		<th><?php echo __('Critical'); ?></th>
@@ -267,13 +268,14 @@
 	</tr>
 	<?php foreach ($encounter['Swing'] as $swing): ?>
 		<tr>
+			<td><?php echo $swing['id']; ?></td>
 			<td><?php echo $swing['encounter_id']; ?></td>
 			<td><?php echo $swing['stime']; ?></td>
-			<td><?php echo $swing['attacker']; ?></td>
+			<td><?php echo $swing['attacker_id']; ?></td>
 			<td><?php echo $swing['swingtype']; ?></td>
 			<td><?php echo $swing['attacktype']; ?></td>
 			<td><?php echo $swing['damagetype']; ?></td>
-			<td><?php echo $swing['victim']; ?></td>
+			<td><?php echo $swing['victim_id']; ?></td>
 			<td><?php echo $swing['damage']; ?></td>
 			<td><?php echo $swing['damagestring']; ?></td>
 			<td><?php echo $swing['critical']; ?></td>

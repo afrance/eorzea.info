@@ -3,13 +3,14 @@
 	<fieldset>
 		<legend><?php echo __('Edit Swing'); ?></legend>
 	<?php
+		echo $this->Form->input('id');
 		echo $this->Form->input('encounter_id');
 		echo $this->Form->input('stime');
-		echo $this->Form->input('attacker');
+		echo $this->Form->input('attacker_id');
 		echo $this->Form->input('swingtype');
 		echo $this->Form->input('attacktype');
 		echo $this->Form->input('damagetype');
-		echo $this->Form->input('victim');
+		echo $this->Form->input('victim_id');
 		echo $this->Form->input('damage');
 		echo $this->Form->input('damagestring');
 		echo $this->Form->input('critical');
@@ -29,5 +30,7 @@
 		<li><?php echo $this->Html->link(__('List Swings'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Encounters'), array('controller' => 'encounters', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Attacker'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

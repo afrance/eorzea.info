@@ -1,6 +1,11 @@
 <div class="swings view">
 <h2><?php echo __('Swing'); ?></h2>
 	<dl>
+		<dt><?php echo __('Id'); ?></dt>
+		<dd>
+			<?php echo h($swing['Swing']['id']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Encounter'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($swing['Encounter']['title'], array('controller' => 'encounters', 'action' => 'view', $swing['Encounter']['id'])); ?>
@@ -13,7 +18,7 @@
 		</dd>
 		<dt><?php echo __('Attacker'); ?></dt>
 		<dd>
-			<?php echo h($swing['Swing']['attacker']); ?>
+			<?php echo $this->Html->link($swing['Attacker']['name'], array('controller' => 'combatants', 'action' => 'view', $swing['Attacker']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Swingtype'); ?></dt>
@@ -33,7 +38,7 @@
 		</dd>
 		<dt><?php echo __('Victim'); ?></dt>
 		<dd>
-			<?php echo h($swing['Swing']['victim']); ?>
+			<?php echo $this->Html->link($swing['Victim']['name'], array('controller' => 'combatants', 'action' => 'view', $swing['Victim']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Damage'); ?></dt>
@@ -82,5 +87,7 @@
 		<li><?php echo $this->Html->link(__('New Swing'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Encounters'), array('controller' => 'encounters', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Encounter'), array('controller' => 'encounters', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Combatants'), array('controller' => 'combatants', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Attacker'), array('controller' => 'combatants', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

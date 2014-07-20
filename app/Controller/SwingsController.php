@@ -56,7 +56,9 @@ class SwingsController extends AppController {
 			}
 		}
 		$encounters = $this->Swing->Encounter->find('list');
-		$this->set(compact('encounters'));
+		$attackers = $this->Swing->Attacker->find('list');
+		$victims = $this->Swing->Victim->find('list');
+		$this->set(compact('encounters', 'attackers', 'victims'));
 	}
 
 /**
@@ -82,7 +84,9 @@ class SwingsController extends AppController {
 			$this->request->data = $this->Swing->find('first', $options);
 		}
 		$encounters = $this->Swing->Encounter->find('list');
-		$this->set(compact('encounters'));
+		$attackers = $this->Swing->Attacker->find('list');
+		$victims = $this->Swing->Victim->find('list');
+		$this->set(compact('encounters', 'attackers', 'victims'));
 	}
 
 /**

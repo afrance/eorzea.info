@@ -4,6 +4,8 @@ App::uses('AppModel', 'Model');
  * Swing Model
  *
  * @property Encounter $Encounter
+ * @property Attacker $Attacker
+ * @property Victim $Victim
  */
 class Swing extends AppModel {
 
@@ -19,6 +21,20 @@ class Swing extends AppModel {
 		'Encounter' => array(
 			'className' => 'Encounter',
 			'foreignKey' => 'encounter_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Attacker' => array(
+			'className' => 'Attacker',
+			'foreignKey' => 'attacker_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Victim' => array(
+			'className' => 'Victim',
+			'foreignKey' => 'victim_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

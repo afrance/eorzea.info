@@ -16,8 +16,11 @@ class SwingTest extends CakeTestCase {
 		'app.swing',
 		'app.encounter',
 		'app.attack_type',
+		'app.damage_type',
 		'app.combatant',
-		'app.damage_type'
+		'app.combatants_encounter',
+		'app.attacker',
+		'app.victim'
 	);
 
 /**
