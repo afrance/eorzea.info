@@ -31,6 +31,20 @@ class SwingsController extends AppController {
         }
 		
 	}
+	
+	
+	public function heavy-hitters() {
+		$this->Swing->recursive = 0;
+		$options = array(
+			'conditions' => array('Swing.attacker' => '),
+			'order' => array('Swing.damage'),
+			'limit' => 5
+		);
+		
+		if ($this->request->is('requested')) {
+			return $this->Swing->find('list', $options)
+        } 		
+	}
 
 /**
  * view method
