@@ -26,14 +26,19 @@
 		</td>
 		<td><?php echo h($importResult['ImportResult']['original_encid']); ?>&nbsp;</td>
 		<td><?php echo h($importResult['ImportResult']['status']); ?>&nbsp;</td>
-		<td><?php echo h($importResult['ImportResult']['combatants_added'] \/ $importResult['ImportResult']['combatants_found']); ?>&nbsp;</td>
-		<td><?php echo h($importResult['ImportResult']['combatants_removed'] \/ $importResult['ImportResult']['combatants_found']); ?>&nbsp;</td>
-		<td><?php echo h($importResult['ImportResult']['swings_added'] \/ $importResult['ImportResult']['swings_found']); ?>&nbsp;</td>
-		<td><?php echo h($importResult['ImportResult']['swings_removed'] \/ $importResult['ImportResult']['swings_found']); ?>&nbsp;</td>
-		<td><?php echo h($importResult['ImportResult']['attacktypes_added'] \/ $importResult['ImportResult']['attacktypes_found']); ?>&nbsp;</td>
-		<td><?php echo h($importResult['ImportResult']['attacktypes_removed'] \/ $importResult['ImportResult']['attacktypes_found']); ?>&nbsp;</td>
-		<td><?php echo h($importResult['ImportResult']['damagetypes_added'] \/ $importResult['ImportResult']['damagetypes_found']); ?>&nbsp;</td>
-		<td><?php echo h($importResult['ImportResult']['damagetypes_removed'] \/ $importResult['ImportResult']['damagetypes_found']); ?>&nbsp;</td>
+		<td><?php echo h(
+				sprintf("%s / %s (%s)"), 
+					$importResult['ImportResult']['combatants_added'], 
+					$importResult['ImportResult']['combatants_found'],
+					$importResult['ImportResult']['combatants_added'] / $importResult['ImportResult']['combatants_found'] * 100
+				); ?>&nbsp;</td>
+		<td><?php //echo h($importResult['ImportResult']['combatants_removed'] / $importResult['ImportResult']['combatants_found']); ?>&nbsp;</td>
+		<td><?php //echo h($importResult['ImportResult']['swings_added'] / $importResult['ImportResult']['swings_found']); ?>&nbsp;</td>
+		<td><?php //echo h($importResult['ImportResult']['swings_removed'] / $importResult['ImportResult']['swings_found']); ?>&nbsp;</td>
+		<td><?php //echo h($importResult['ImportResult']['attacktypes_added'] / $importResult['ImportResult']['attacktypes_found']); ?>&nbsp;</td>
+		<td><?php //echo h($importResult['ImportResult']['attacktypes_removed'] / $importResult['ImportResult']['attacktypes_found']); ?>&nbsp;</td>
+		<td><?php //echo h($importResult['ImportResult']['damagetypes_added'] / $importResult['ImportResult']['damagetypes_found']); ?>&nbsp;</td>
+		<td><?php //echo h($importResult['ImportResult']['damagetypes_removed'] / $importResult['ImportResult']['damagetypes_found']); ?>&nbsp;</td>
 	</tr>
 <?php endforeach; ?>
 	</tbody>
